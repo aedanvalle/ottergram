@@ -1,50 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- This project was built by Aedan Valle from CPSC 349 section 2-->
 <head>
+    <!--
+        Below are the settings for proper text for using utf-8 character encoding
+        for electronic communication.  
+    -->
     <meta charset="UTF-8">
+
+    <!--
+        This is used for making all websites look good on all devices
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ottergram</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
+
+    <!--the next 3 things are the tab name and  -->
+    <title>Ottergram</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
 </head>
 <body>
-    <header>
-        <h1>ottergram !</h1>
+    <!-- this is the title of the website and shows across the top of the site like a banner -->
+    <header class="main-header">
+       <h1 class="logo-text">ottergram</h1> 
     </header>
-    <ul>
-        <li>
-            <!--<a href="img/otter1.jpg" alt="Barry">awefja;welfj-->
-            <img src="img/otter1.jpg" alt="Barry the Otter">
-                <!--<span>Barry</span></li>-->
-                <span class="thumbnail-title">Barry</span>
+
+    <!-- these are the pix that get displayed at the bottom of the site that are organized 
+            in a manner that reflect the order of the image files in the img folder.  
+            They are clickable that allows for rotating out images 
+            
+            THERE'S MORE CODE FOR TRANSITIONS FOR THE PICTURES IN [CHAPTER 7]-->
+    <main class="main-content">
+        <ul class="thumbnail-list">
+            <a href="img/otter1.jpg" data-image-role="trigger" data-image-title="Stayin' Alive" data-image-url="img/otter1.jpg">
+                <li class="thumbnail-item">
+                    <img class="thumbnail-image" src="img/otter1.jpg" alt="Barry the Otter">
+                    <span class="thumbnail-title">Barry</span>
+                </li>
             </a>
-        <li>
-            <!--<a href="img/otter2.jpg" alt="Robin">-->    
-            <img src="img/otter2.jpg" alt="Barry the Otter">       
-            <span>Robin</span>
-            </a> 
-        </li>
-        <li>
-            <img src="img/otter3.jpg" alt="Barry the Otter">
-            <!--<a href="img/otter3.jpg" alt="Maurice">-->
-            <span>Maurice</span>
-            </a> 
-        </li>
+            <a href="img/otter2.jpg" data-image-role="trigger" data-image-title="How Deep Is Your Love"
+                data-image-url="img/otter2.jpg">
+                <li class="thumbnail-item">
+                    <img class="thumbnail-image" src="img/otter2.jpg" alt="Robin the Otter">
+                    <span class="thumbnail-title">Robin</span>
+                </li>
+            </a>
+            <a href="img/otter3.jpg" data-image-role="trigger" data-image-title="You Should be Dancing"
+                data-image-url="img/otter3.jpg">
+                <li class="thumbnail-item">
+                    <img class="thumbnail-image" src="img/otter3.jpg" alt="Maurice the Otter">
+                    <span class="thumbnail-title">Maurice</span>
+                </li>
+            </a>
+            <a href="img/otter4.jpg" data-image-role="trigger" data-image-title="Night Fever"
+                data-image-url="img/otter4.jpg">
+                <li class="thumbnail-item">
+                    <img class="thumbnail-image" src="img/otter4.jpg" alt="Lesley the Otter">
+                    <span class="thumbnail-title">Lesley</span>
+                </li>
+            </a>
+            <a href="img/otter5.jpg" data-image-role="trigger" data-image-title="To Love Somebody"
+                data-image-url="img/otter5.jpg">
+                <li class="thumbnail-item">
+                    <img class="thumbnail-image" src="img/otter5.jpg" alt="Barbara the Otter">
+                    <span class="thumbnail-title">Barbara</span>
+                </li>
+            </a>
 
-        <li>      
-            <!--<a href="img/otter4.jpg" alt="lesley">-->   
-            <img src="img/otter4.jpg" alt="Barry the Otter">    
-            <span>Lesley</span>
-            </a> 
-        </li>
+            <a href="img/otter6.jpg" data-image-role="trigger" data-image-title="FlexBox Froggy"
+                data-image-url="img/otter6.jpg">
+                <li class="thumbnail-item">
+                    <img class="thumbnail-image" src="img/otter6.jpg" alt="FlexBox Froggy">
+                    <span class="thumbnail-title">FlexBox </span>
+                </li>
+            </a>
 
-        <li>
-            <!--<a href="img/otter5.jpg" alt="barbara"> -->
-            <img src="img/otter5.jpg" alt="Barry the Otter">
-            <span>Barbara</span>
-            </a> 
-        </li>            
-    </ul>
-    
+            <a href="img/otter7.jpg" data-image-role="trigger" data-image-title="Grid Garden"
+                data-image-url="img/otter7.jpg">
+                <li class="thumbnail-item">
+                    <img class="thumbnail-image" src="img/otter7.jpg" alt="Grid Garden">
+                    <span class="thumbnail-title">Grid Garden</span>
+                </li>
+            </a>
+        </ul>
+​
+        <div class="detail-image-container">
+            <div class="detail-image-frame">
+                <img class="detail-image" data-image-role="target" , src="img/otter1.jpg" alt="">
+                <span class="detail-image-title" data-image-role="title">Stayin' Alive</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- this javascript function is responsible for pulling the image MAIN_IMAGE off and replacing it
+        some other image from the folder based on the number parameter passed in.  -->
+    <!--<script>
+        
+        function switch_picture(route) {
+            var image = document.getElementById("MAIN_IMAGE");
+            image.src = "img/otter" + route + ".jpg";//
+        }
+    </script>-->
+
+    <script src="scripts/main.js" charset="utf-8"></script>
 </body>
+
 </html>
